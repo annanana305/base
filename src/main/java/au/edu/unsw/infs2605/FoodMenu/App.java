@@ -1,4 +1,4 @@
-package au.edu.unsw.infs2605.base;
+package au.edu.unsw.infs2605.FoodMenu;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,10 +15,14 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        stage.setTitle("Hello World App");
-        Scene scene = new Scene(loadFXML("app"), 640, 480);
+        stage.setTitle("Food Menu App");
+        Scene scene = new Scene(loadFXML("Dish"), 640, 480);
         stage.setScene(scene);
         stage.show();
+        
+        Dish testDish = new Dish("Hamburger", "bread", 15.0, "pick-up");
+        System.out.println(testDish);
+        System.out.println("Added");
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
